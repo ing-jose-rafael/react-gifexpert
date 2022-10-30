@@ -1,43 +1,47 @@
 import { useForm } from "../hooks/useForm"
 
 export const FormWithCustomHook = () => {
-  const { formState, onInputChange } = useForm({
-      username:'',
-      email:'',
-      password:''
-    });
+  const { formState, onInputChange, username, email, password,onResetForm } = useForm({
+    username: '',
+    email: '',
+    password: ''
+  });
   
-    const {username,email,password} = formState;
-  
+  // const {username,email,password} = formState;
 
   return (
     <>
       <h1>Formulario Custom Hook</h1>
       <hr />
-      <input 
-        type="text" 
+      <input
+        type="text"
         className="form-control"
         placeholder="Username"
         name="username"
         value={username}
-        onChange={ onInputChange }
+        onChange={onInputChange}
       />
-      <input 
-        type="email" 
+      <input
+        type="email"
         className="form-control mt-2"
         placeholder="ing.jcarreno@gmail.com"
         name="email"
         value={email}
-        onChange={ onInputChange }
+        onChange={onInputChange}
       />
-      <input 
-        type="password" 
+      <input
+        type="password"
         className="form-control mt-2"
         placeholder="Contraseña"
         name="password"
         value={password}
-        onChange={ onInputChange }
+        onChange={onInputChange}
       />
+      <button
+        className="btn btn-primary mt-2"
+        onClick={onResetForm}>
+        Borrar
+      </button>
     </>
   )
 }
