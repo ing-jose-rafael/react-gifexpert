@@ -12,14 +12,6 @@ export const Layout = () => {
   // no se puede desectructurar un objeto vacio
   const { quote, author } = !!data && data[0];
 
-  // if (isLoanding) {
-  //   return (
-  //     <div className="spinner-border text-primary" role="status">
-  //       <span className="visually-hidden">Cargando...</span>
-  //     </div>
-  //   )
-  // }
-  // aca no puede ir un Hooks, no pueden ser creado de manera condicional
   return (
     <>
       <h1>BreakingBad Quotes</h1>

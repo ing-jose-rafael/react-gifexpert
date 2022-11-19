@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 export const CounterApp = () => {
+  /** useState con un objeto con multiples propiedades */
   const [state, setCounter] = useState({
     counter1: 10,
     counter2: 20,
